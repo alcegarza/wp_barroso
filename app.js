@@ -16,10 +16,10 @@ app.set('view engine', 'ejs')
 
 // Routes
 const indexRouter = require('./src/routes/index')
-const moreRouter = require('./src/routes/more')
+const legalRouter = require('./src/routes/legal')
 
 app.use('/', indexRouter)
-app.use('/more', moreRouter)
+app.use('/legal', legalRouter)
 
 
 // Listen on port 5000

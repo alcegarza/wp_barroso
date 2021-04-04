@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 // Static Files
 app.use(express.static('public'))
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs')
 
 // Routes
 const indexRouter = require('./src/routes/index')
-const moreRouter = require('./src/routes/more')
+const moreRouter = require('./src/routes/index')
 
 app.use('/', indexRouter)
 app.use('/more', moreRouter)

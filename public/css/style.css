@@ -185,7 +185,7 @@ h6 {
 
 #header #logo img {
   padding: 0;
-  margin: 0;
+  margin: -2;
   max-height: 40px;
 }
 
@@ -302,7 +302,7 @@ h6 {
 
 .nav-menu li.buy-tickets a {
   color: #fff;
-  background: #f82249;
+  background: #0138a9;
   padding: 7px 22px;
   border-radius: 50px;
   border: 2px solid #f82249;
@@ -477,7 +477,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.8);
+  background: rgba(6, 12, 34, 0.50);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -517,7 +517,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro h1 span {
-  color: #f82249;
+  color: #0138a9;
+  -webkit-text-stroke: 1px white;
 }
 
 #intro p {

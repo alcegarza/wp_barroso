@@ -15,7 +15,7 @@ app.set('view engine', 'ejs')
 
 // Routes
 const indexRouter = require('./src/routes/index')
-const moreRouter = require('./src/routes/index')
+const moreRouter = require('./src/routes/more')
 
 app.use('/', indexRouter)
 app.use('/more', moreRouter)

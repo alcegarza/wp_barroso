@@ -185,7 +185,7 @@ h6 {
 
 #header #logo img {
   padding: 0;
-  margin: -2;
+  margin: 0;
   max-height: 40px;
 }
 
@@ -1547,7 +1547,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Legal Section
 --------------------------------------------------------------*/
 
-
+ 
 
 .section-header-legal p {
   text-align: justify;

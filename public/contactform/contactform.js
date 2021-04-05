@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
     f.children('input').each(function() { // run all inputs
 
       var i = $(this); // current input
+      
       var rule = i.attr('data-rule');
 
       if (rule !== undefined) {
@@ -99,6 +100,8 @@ jQuery(document).ready(function($) {
       url: action,
       data: str,
       success: function(msg) {
+
+
         // alert(msg);
         if (msg == 'OK') {
           $("#sendmessage").addClass("show");

@@ -90,7 +90,14 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
 
         console.log(ferror);
-        if(!ferror) $("#sendmessage").addClass("show");
+        if(!ferror){ 
+        	$("#sendmessage").addClass("show");
+        	$("#errormessage").removeClass("show");
+    	}else {
+          $("#sendmessage").removeClass("show");
+          $("#errormessage").addClass("show");
+          $('#errormessage').html("Mensaje no eviado. Por favor revise los campos");
+      }
         return(ferror)
 
 

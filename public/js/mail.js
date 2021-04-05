@@ -14,13 +14,26 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 
 
 const sendMail = (name, email, subject, message) => {
+	
 
-	const mailOptions = {
-	from: email,
-	to:'rocioacgz@gmail.com',
-	subject:subject,
-	text: name + ': ' + message
-};
+		var mailOptions = {
+		from: '',
+		to:'rocioacgz@gmail.com',
+		subject:subject,
+		text: name + ': ' + message
+		};
+
+		if(name.length > 3 && subject.length >3 && message.length > 0){
+			console.log('hola')
+		var mailOptions = {
+		from: email,
+		to:'rocioacgz@gmail.com',
+		subject:subject,
+		text: name + ': ' + message
+		};
+
+		}
+	
 
 transporter.sendMail(mailOptions, function(err, data){
 if (err){

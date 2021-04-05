@@ -707,12 +707,14 @@
               </button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="#">
+              <!--  <form method="POST" action="#">-->
+                <form role="form" class="contactForm"<>
+
                 <div class="form-group">
-                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                  <input type="text" class="form-control" name="your-name" placeholder="Nombre y apellido">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                  <input type="text" class="form-control" name="your-email" placeholder="Email">
                 </div>
                 <div class="form-group">
                   <select id="ticket-type" name="ticket-type" class="form-control" >
@@ -725,6 +727,7 @@
                 <div class="text-center">
                   <button type="submit" class="btn">Buy Now</button>
                 </div>
+              <!-- </form> -->
               </form>
             </div>
           </div><!-- /.modal-content -->
@@ -793,7 +796,7 @@
               <div class="validation"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Escriba algo" placeholder="Message"></textarea>
+              <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Escriba algo" placeholder="Mensaje"></textarea>
               <div class="validation"></div>
             </div>
             <div class="text-center"><button type="submit">Enviar mensaje</button></div>
@@ -822,6 +825,8 @@
           const email = $('#email').val().trim();
           const subject = $('#subject').val().trim();
           const message = $('#message').val().trim();
+
+
           
 
           const data = {
@@ -831,6 +836,7 @@
             message
           
           };
+          
 
           $.post('/contact',data, function(){
             console.log('Server received our data');
@@ -926,6 +932,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  ç
 </body>
 
 </html>

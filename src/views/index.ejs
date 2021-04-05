@@ -800,6 +800,9 @@
               <div class="validation"></div>
             </div>
             <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+            <form method="post">
+            <div class="text-center"><button type="submit" onclick="sendEmail()">Enviar mensaje2</button></div>
+          </form>
           </form>
         </div>
          
@@ -813,6 +816,28 @@
         </form> -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+        <script type="text/javascript">
+
+        
+
+        function sendEmail(){
+          if($('#name').val().trim().length<4 || $('#subject').val().trim().length < 4 || $('#message').val().trim().length<1){
+            return false;
+          }
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "temp13oral@gmail.com",
+            Password : "contrasenatemporal1!",
+            To : 'temp13oral@gmail.com',
+            From : $('#email').val().trim(),
+            Subject : $('#subject').val().trim(),
+            Body : $('#name').val().trim() + ": " + $('#message').val().trim()
+        });
+      }
+
+        </script>
 
         <script src="contactform/contactF.js"></script>
 
@@ -836,9 +861,9 @@
             message
           
           };
-          
 
-          $.post('/contact',data, function(){
+
+          $.post('/contact',data, function() {
             console.log('Server received our data');
           });         
 

@@ -108,6 +108,12 @@ h6 {
   padding-bottom: 5px;
 }
 
+.section-header-gallery {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 1px;
+}
+
 .section-header::before {
   content: '';
   position: absolute;
@@ -939,6 +945,44 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 1;
 }
 
+#gallery .more button[type="submit"] {
+  background: #0138a9;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#gallery .more button[type="submit"]:hover {
+  background: #2f3138;
+}
+
+#gallery .pages button[type="submit"] {
+  background: #0138a9;
+  border: 0;
+  padding: 10px 10px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+
+}
+
+#gallery .pages button[type="submit"]:hover {
+  background: #2f3138;
+}
+
+#gallery .more a {
+  color: #ffffff;
+}
+
+#gallery .more a:hover {
+  color: #ffffff;
+}
+
 /*--------------------------------------------------------------
 # supporters Section
 --------------------------------------------------------------*/
@@ -1557,3 +1601,50 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 500;
   color: #9195a2;
 }
+
+
+
+/*--------------------------------------------------------------
+# More Gallery Section
+--------------------------------------------------------------*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  padding: 0 0px 4px 4px;
+  text-align: center;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 75%;
+
+}
+
+#gallery-more {
+  padding: 0px 60px 20px 60px;
+  overflow: hidden;
+  text-align-last: end;
+}
+
+#gallery-more .pages button[type="submit"] {
+
+  background: #0138a9;
+  border: 0;
+  padding: 10px 10px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+
+}
+
+#gallery-more .pages button[type="submit"]:hover {
+  background: #2f3138;

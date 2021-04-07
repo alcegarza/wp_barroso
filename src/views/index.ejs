@@ -624,6 +624,8 @@
     <!--==========================
       Buy Ticket Section
       ============================-->
+
+
       <section id="buy-tickets" class="section-with-bg wow fadeInUp">
         <div class="container">
 
@@ -703,6 +705,9 @@
         </div>
 
         <!-- Modal Order Form -->
+         
+
+
         <div id="buy-ticket-modal" class="modal fade">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -714,27 +719,128 @@
               </div>
               <div class="modal-body">
                 <!--  <form method="POST" action="#">-->
-                  <form role="form" class="contactForm"<>
+                   <form role="form" class="contactForm">
+                    
 
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="your-name" placeholder="Nombre y apellido">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="your-email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <select id="ticket-type" name="ticket-type" class="form-control" >
-                        <option value="">-- Select Your Ticket Type --</option>
-                        <option value="standard-access">Standard Access</option>
-                        <option value="pro-access">Pro Access</option>
-                        <option value="premium-access">Premium Access</option>
-                      </select>
-                    </div>
-                    <div class="text-center">
-                      <button type="submit" class="btn">Buy Now</button>
-                    </div>
-                    <!-- </form> -->
-                  </form>
+
+
+
+                    <section id="inscription">
+
+                      <div class="container">
+
+                        <div class="formIns">
+
+                          <div id="sendmessageIns">Inscripción realizada. ¡Gracias!</div>
+                          <div id="errormessageIns"></div>
+
+
+                          <form role="form" class="inscriptionForm">
+                            
+                              <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="ins-name" placeholder="Nombre y apellido" data-rule="minlen:4" data-msg="Introducir al menos 4 caracteres" /> 
+                                <div class="validation"></div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="ins-email" placeholder="Email de contacto" data-rule="email" data-msg="Email no válido" /> 
+                                <div class="validation"></div>
+                              </div>
+
+                              <div class="form-group">
+                                <input type="text" class="form-control" name="telf" id="telf" placeholder="Teléfono de contacto" data-rule="minlen:9" data-msg="Teléfono no válido" />
+                                <div class="validation"></div>
+                              </div>
+
+                              <div class="form-group col-md-6" style="padding:0 0">
+                                <input type="number" name="age" class="form-control" id="age" placeholder="Age" data-rule="minlen:0" data-msg="Solo dígitos" />
+                                <div class="validation"></div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" name="club" id="club" placeholder="Equipo de WP" data-rule="minlen:1" data-msg="Introducir al menos 4 caracteres" />
+                                <div class="validation"></div>
+                              </div>
+                              
+                            
+                            
+                            
+                              <div class="form-group">
+                                <select id="ticket-type" name="ticket-type" class="form-control" >
+                                  <option value="notok">-- Select Your Ticket Type --</option>
+                                  <option value="standard-access">Standard Access</option>
+                                  <option value="pro-access">Pro Access</option>
+                                  <option value="premium-access">Premium Access</option>
+                                </select>
+                              
+                              <div class="validationIns"></div>
+                            </div>
+                            <!-- <div class="text-center"><button type="submit">Enviar mensaje</button></div> -->
+                            <form method="post">
+                              <div class="text-center"><button type="submit" onclick="sendIns()">Enviar mensaje</button></div>
+                            </form>
+                          </form>
+                        </div>
+
+
+                     <!--  <form> 
+                        <input type="text" id="subject" placeholder="Subject">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="name" id="name" placeholder="Name">
+                        <textarea name='message' id='message' cols="30" rows="10"></textarea><br>
+                        <input type="submit" name="Submit">
+                      </form> -->
+
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                      <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+                      <script type="text/javascript">
+
+                      
+
+                      function sendIns(){
+                        console.log($('#telf').val().trim().length);
+                        if($('#ins-name').val().trim().length<4 || $('#ticket-type').val().trim().length<6 || $('#age').val().trim().length<1 || $('#club').val().trim().length<1 || $('#telf').val().trim().length<9 || $('#telf').val().trim().length>9) {
+                          
+                          console.log("hello");
+                          $("#sendmessageIns").removeClass("show");
+                          $("#errormessageIns").addClass("show");
+                          $('#errormessageIns').html("Revise los campos");
+                          return false;
+                        }else{
+                          $("#errormessageIns").removeClass("show");
+                          $("#sendmessageIns").addClass("show");
+                        
+                        Email.send({
+                          Host : "smtp.gmail.com",
+                          Username : "temp13oral@gmail.com",
+                          Password : "contrasenatemporal1!",
+                          To : 'temp13oral@gmail.com',
+                          From : $('#ins-email').val().trim(),
+                          Subject : "Inscripción",
+                          Body : $('#ins-name').val().trim() +' (' + $('#ins-email').val().trim() + ') '+ ": "  +$('#ticket-type').val().trim() +'.'
+                          + 'Teléfono de contacto: ' + $('#telf').val().trim() +'. ' + 'Club del jugador/a: ' + $('#club').val().trim() +'. ' + 'Edad del jugador/a: ' + $('#age').val().trim()
+                        });
+                      }
+                    }
+
+                      </script>
+
+                      <!--Check the data in the contact 
+                          form has the correct values and
+                          send the okay message or not okay -->
+
+                          
+                        </div>
+
+                      </section>
+
+
+
+
+
+
+                    </form><!-- </form> -->
+                  
                 </div>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -813,14 +919,6 @@
           </div>
 
 
-       <!--  <form> 
-          <input type="text" id="subject" placeholder="Subject">
-          <input type="email" id="email" placeholder="Email">
-          <input type="name" id="name" placeholder="Name">
-          <textarea name='message' id='message' cols="30" rows="10"></textarea><br>
-          <input type="submit" name="Submit">
-        </form> -->
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
 
@@ -853,6 +951,7 @@
             <script>
             $('form.contactForm').on('submit', (e) => {
               e.preventDefault();
+              console.log("adios")
             });;
             </script>
           </div>
@@ -860,6 +959,10 @@
         </section><!-- #contact -->
 
       </main>
+
+
+
+
 
 
   <!--==========================
@@ -938,11 +1041,13 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
+  <script src="contactform/inscription.js"></script>
   <!-- <script src="contactform/contactform.js"></script> -->
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-  ç
+
+  
 </body>
 
 </html>

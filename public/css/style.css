@@ -1206,6 +1206,111 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# Form inscription Section
+--------------------------------------------------------------*/
+
+#inscription {
+  padding: 20px 0;
+}
+
+#inscription .inscription-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#inscription .inscription-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #0138a9;
+}
+
+#inscription .inscription-info address,
+#inscription .inscription-info p {
+  margin-bottom: 0;
+  color: #112363;
+}
+
+#inscription .inscription-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #112363;
+}
+
+#inscription .inscription-info a {
+  color: #4869df;
+}
+
+#inscription .inscription-info a:hover {
+  color: #0138a9;
+}
+
+#inscription .inscription-address,
+#inscription .inscription-phone,
+#inscription .inscription-email {
+  margin-bottom: 20px;
+}
+
+#inscription .formIns #sendmessageIns {
+  color: #0138a9;
+  border: 1px solid #0138a9;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#inscription .formIns #errormessageIns {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#inscription .formIns #sendmessageIns.show,
+#inscription .formIns #errormessageIns.show,
+#inscription .formIns .show {
+  display: block;
+}
+
+#inscription .formIns .validationIns {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#inscription .formIns input,
+#inscription .formIns textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+#inscription .formIns button[type="submit"] {
+  background: #0138a9;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#inscription .formIns button[type="submit"]:hover {
+  background: #2f3138;
+}
+
+
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 

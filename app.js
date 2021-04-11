@@ -24,6 +24,9 @@ const indexRouter = require('./src/routes/index')
 const legalRouter = require('./src/routes/legal')
 const more_galleryRouter = require('./src/routes/more_gallery')
 
+//Routes for staff
+
+
 
 app.use('/', indexRouter)
 app.use('/legal', legalRouter)

@@ -89,21 +89,36 @@ jQuery(document).ready(function($) {
         }
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
 
-        console.log(ferror);
-        if(!ferror){ 
+        var checkbox_form = document.getElementById("Checkform");
+
+            
+
+        if(!ferror && checkbox_form.checked){ 
         	$("#sendmessage").addClass("show");
         	$("#errormessage").removeClass("show");
-    	}else {
+    	}else if(ferror && checkbox_form.checked || ferror && !checkbox_form.checked) {        
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
           $('#errormessage').html("Mensaje no eviado. Por favor revise los campos");
       }
+      else if(!ferror && !checkbox_form.checked){
+        
+          $("#sendmessage").removeClass("show");
+          $("#errormessage").addClass("show");
+          $('#errormessage').html("Not checked");          
+          console.log(checkbox_form,'aaaa')
+          
+        
+      }
+
         return(ferror)
 
 
 
       }
     });
+
+    
     
 
       

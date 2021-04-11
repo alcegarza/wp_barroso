@@ -15,6 +15,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+
+
 a {
   color: #0138a9;
   transition: 0.5s;
@@ -1704,7 +1706,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #9195a2;
+  color: #152b79;
+}
+
+.section-header-legal ul {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #152b79;
+  padding: 0 0 0 75px;
 }
 
 

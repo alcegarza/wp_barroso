@@ -159,11 +159,13 @@
               <div class="speaker">
                 <img src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
                 <div class="details">
-                  <h3><a href="speaker-details.html">Bea Ortiz</a></h3>
-                  <p>Deportista invitada</p>
+                  <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+                  <p>Debitis iure vero</p>
                   <div class="social">
-                    <a href="https://twitter.com/bea_ortiz"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/bea8ortiz"><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -620,35 +622,17 @@
   -->
 
     <!--==========================
-     Inscription Section
+      Buy Ticket Section
       ============================-->
 
 
       <section id="buy-tickets" class="section-with-bg wow fadeInUp">
         <div class="container">
 
-          <div><a href="/docs/autorizacion.pdf" download>
-              <p style="float: right;">
-                
-                <figure style="float:right">
-                  <center>
-                    
-                    <img src="img/doc.png" height="40" width="45" border="1px">
-                  
-                  </center>
-                  <figcaption style="text-align:justify">Autorización</figcaption>
-                </figure>
-
-              </p></a>
-            </div>
-              <div class="section-header" style="padding-left: 110px;">
+          <div class="section-header">
             <h2>Inscripción</h2>
 
-          
           </div>
-          
-
-          
 
           <div class="row">
             <div class="col-lg-4">
@@ -767,12 +751,11 @@
 
                               <div class="form-group">
                                 <input type="text" class="form-control" name="telf" id="telf" placeholder="Teléfono de contacto" data-rule="minlen:9" data-msg="Teléfono no válido" />
-                                <div class="validation" style="color:red"></div>
+                                <div class="validation"></div>
                               </div>
-
                               <div class="form-group col-md-6" style="padding:0 0">
-                                <input type="number" name="age" class="form-control" id="age" placeholder="Edad" data-rule="minlen:1" data-msg="Introduzca una edad" />
-                                <div class="validation" style="color:red"></div>
+                                <input type="text" name="age" class="form-control" id="age" placeholder="Edad" data-rule="minlen:0" data-msg="Solo dígitos" />
+                                <div class="validation"></div>
                               </div>
                               <div class="form-group">
                                 <input type="text" class="form-control" name="club" id="club" placeholder="Equipo de WP" data-rule="minlen:1" data-msg="Introducir al menos 4 caracteres" />
@@ -873,20 +856,6 @@
                       <!--Check the data in the contact 
                           form has the correct values and
                           send the okay message or not okay -->
-
-                              <script src="contactform/inscription.js"></script> 
-                              <script>
-                             
-                               var checkbox_form = document.getElementById("CheckIns");
-                               if(!checkbox_form){
-                               
-                               }else{
-                              $('formIns.inscriptionForm').on('submit', (e) => {
-                                e.preventDefault();
-                              });;
-                            }
-                              
-                          </script>
 
                           
                         </div>

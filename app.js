@@ -27,9 +27,9 @@ const more_galleryRouter = require('./src/routes/more_gallery')
 
 //Routes for staff_
 const staff = require('./src/routes/staff')
-const patri_herrera = require('./src/routes/patri_herrera')
-const fernando_carpena = require('./src/routes/fernando_carpena')
-const bea_ortiz = require('./src/routes/bea_ortiz')
+// const patri_herrera = require('./src/routes/patri_herrera')
+// const fernando_carpena = require('./src/routes/fernando_carpena')
+// const bea_ortiz = require('./src/routes/bea_ortiz')
 
 
 
@@ -39,9 +39,9 @@ app.use('/more_gallery', more_galleryRouter)
 
 
 app.use('/staff', staff)
-app.use('/patri_herrera', patri_herrera)
-app.use('/fernando_carpena', fernando_carpena)
-app.use('/bea_ortiz', bea_ortiz)
+// app.use('/patri_herrera', patri_herrera)
+// app.use('/fernando_carpena', fernando_carpena)
+// app.use('/bea_ortiz', bea_ortiz)
 
 
 // Listen on port 5000

@@ -398,7 +398,7 @@
         <div class="container">
           
 
-          <div class="section-header">
+          <div class="section-header" style="margin-bottom:30px">
             <h2>Inscripción</h2>
 
           </div>
@@ -446,39 +446,85 @@
         <div id="buy-ticket-modal" class="modal fade">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header" style = "padding-bottom: 0px; height: 70px">
                 <h4 class="modal-title">Inscripción</h4>
                 <br>
                 <p class="modal-title" style="text-align: end;margin: 0 0 30px 5px;font-size:smaller">Datos jugador/a salvo correo y teléfono en caso de menor de edad que serán del contacto.</p>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
+                
               </div>
+              <div class="modal-body" style="padding-bottom: 0px">
+                <p class="modal-title" style="font-size:smaller">  <i> *Una vez realizada la inscripción nos pondremos en contacto con ustedes para la realización del pago. </i></p> 
+              </div>
+
               <div class="modal-body">
 
 
+
                 <form name="google-sheet">
-                  <div id = "form-alerts"></div>                  
-                  <div class="form-group mb-3">
-                    <label for="name" class="form-label">Nombre y Apellidos</label>
-                    <input type="text" id="name" name="Nombre y Apellido" class="form-control" placeholder="Nombre del deportista" required>
-                  </div>
-                  <div class="form-group mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" id="email" name="Email"  class="form-control" placeholder="Email del padre/madre o tutor/a" required>
-                  </div>
-                  <div class="form-group mb-3">
-                    <label for="phone" class="form-label">Teléfono</label>
-                    <input type="text" id="phone" name="Teléfono" class="form-control" placeholder="Teléfono del padre/madre o tutor/a" required>
-                  </div>
-                  <div class="form-group mb-3">
-                    <label for="age" class="form-label">Edad</label>
-                    <input type="number" id="age" name="Edad" class="form-control" placeholder="Edad del deportista" required>
-                  </div>
-                  <div class="form-group mb-3">
-                    <label for="team" class="form-label">Equipo de waterpolo</label>
-                    <input type="text" id="team" name="Club WP" class="form-control" placeholder="Equipo de waterpolo del deportista">
-                  </div>
+                  <div id = "form-alerts"></div>
+                  <h4 class="modal-title"> Datos del jugador </h2>              
+                    <div class="form-group mb-3">
+
+                      <div class="row">
+                        <label for="name" class="form-label" style="margin-left: 10px;">Nombre y Apellidos</label>    
+                      </div>
+                      <div class="row">
+                        <div class="column"> <input type="text" id="name" name="Nombre" class="form-control" placeholder="Nombre del deportista" required> </div>
+                        <div class="column"> <input type="text" id="name" name="Apellidos" class="form-control" placeholder="Apellido del deportista" required> </div>
+                      </div>
+
+
+                      <div class="form-group mb-3">
+                        <div class="row">
+                          <div class="column" style="text-align: left;margin-left: 10px;">
+                            <label for="team" class="form-label">Equipo de waterpolo</label>
+                            <input type="text" id="team" name="Club WP" class="form-control" placeholder="Equipo de waterpolo">
+                          </div>
+                          <div class="column" style="text-align: left;margin-left: 10px;">
+                            <label for="position" class="form-label" >Posición de juego</label>
+                            <input type="text" id="position" name="Posición" class="form-control" placeholder="Posición de juego">
+                          </div>
+                          </div>
+                        </div>
+                      
+
+
+
+                      <div class="form-group mb-3">
+                        <div class="row">
+                          <div class="column" style="text-align: left;margin-left: 10px;">
+                            <label for="age" class="form-label">Edad</label>
+                            <input type="number" id="age" name="Edad" class="form-control" placeholder="Edad del deportista" required>
+                          </div>
+                          <div class="column" style="text-align: left;margin-left: 10px;">
+                            <label for="age" class="form-label" >Talla bañador</label>
+                            <select class="custom-select mr-sm-2" id="talla" name="Talla" required="">
+                              <option selected>Talla</option>
+                              <option value="1">XS</option>
+                              <option value="1">S</option>
+                              <option value="2">M</option>
+                              <option value="3">L</option>
+                              <option value="3">XL</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <h4 class="modal-title"> Datos del contacto </h2>
+                      <div class="form-group mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="Email"  class="form-control" placeholder="Email del padre/madre o tutor/a" required>
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="phone" class="form-label">Teléfono</label>
+                        <input type="text" id="phone" name="Teléfono" class="form-control" placeholder="Teléfono del padre/madre o tutor/a" required>
+                      </div>
+                  
                   <div class="text-center">
                     <button class="btn btn-primary" type="submit">Inscribir</button>
                   </div>
@@ -800,7 +846,7 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => $("#form-alerts").html("<div class='alert alert-success'>¡Inscripción completada! Os esperamos</div>"))
+      .then(response => $("#form-alerts").html("<div class='alert alert-success'>¡Inscripción completada, para la realización del pago nos pondremos en contacto con ustedes! Os esperamos</div>"))
       .catch(error => console.error('Error!', error.message))
   })
 </script>
